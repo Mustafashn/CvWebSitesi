@@ -1,0 +1,42 @@
+@{
+    Layout="_AdminLayout";
+}
+@model List<Education>
+    <br>
+    <h2>Education List</h2>
+<table class="table table-bordered mr-10 ml-10">
+    <tr>
+        <th>ID</th>
+        <th >Title</th>
+        <th >SubTitle</th>
+        <th >GPA</th>
+        <th >FirstDate</th>
+        <th >LastDate</th>
+        <th style="width: 200px;"></th>
+    </tr>
+    @foreach(var item in  Model) {
+        <tr>
+            <td>@item.EducationId</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <th >@item.GPA</th>
+            <td> @(((DateTime)item.FirstDate).ToString("dd-MMM-yyyy"))</td>
+            <td> @(((DateTime)item.LastDate).ToString("dd-MMM-yyyy")) </td>  
+            <td >
+                <div class="d-grid gap-2 d-md-block">
+                    <form action="/admin/EducationDelete" method="POST" style="display:inline">
+                                <input type="hidden" name="EducationId" value="@item.EducationId">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>Delete</button>
+                    </form>
+                    <a href="/admin/EducationEdit/@item.EducationId" class="btn btn-warning">
+                    <i class="fas fa-pencil-alt"></i>
+                    Edit</a>
+
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+<br>
+ <a href="/admin/EducationAdd" class="btn btn-success">Add Education</a>

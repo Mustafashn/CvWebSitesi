@@ -1,0 +1,50 @@
+@{
+    Layout="_Layout";
+}
+@model ContactModel
+<!-- Page Content-->
+<div class="container-fluid p-0">
+    <!-- About-->
+    @await Component.InvokeAsync("About")
+    <hr class="m-0" />
+    <!-- Experience-->
+    @await Component.InvokeAsync("Experiences")
+    <hr class="m-0" />
+    <!-- Education-->
+    @await Component.InvokeAsync("Education")
+    
+    <hr class="m-0" />
+    <!-- Skills-->
+    @await Component.InvokeAsync("Skills")
+    <hr class="m-0" />
+    <!-- Interests-->
+    @await Component.InvokeAsync("Interest")
+    <hr class="m-0" />
+    <!-- Awards-->
+    @await Component.InvokeAsync("Certifications")
+
+    <!-- Contact-->
+    <section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Contact Me</h2>
+        <form asp-controller="Home" asp-action="Index" method="POST">
+			<div asp-validation-summary="All" class="text-danger"></div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control">
+
+            <label asp-for="Mail"></label>
+            <input asp-for="Mail" class="form-control">
+
+            <label asp-for="Subject"></label>
+            <input asp-for="Subject" class="form-control">
+
+            <label asp-for="Message"></label>
+            <textarea asp-for="Message" class="form-control"></textarea>
+
+            <button class="btn btn-primary mt-2" type="submit">Send</button>
+        </form>
+       
+    </div>
+</section>
+</div>
+

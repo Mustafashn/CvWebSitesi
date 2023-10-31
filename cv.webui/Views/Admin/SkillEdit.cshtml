@@ -1,0 +1,22 @@
+@{
+    Layout="_AdminLayout";
+}
+@model SkillModel
+<br>
+<div class="container">
+    <h2>Edit Skill</h2>
+    <form asp-controller="Admin" asp-action="SkillEdit" method="POST">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="hidden" name="SkillId" value="@Model.SkillId">
+        <label asp-for="SkillName"></label>
+        <input asp-for="SkillName" class="form-control">
+
+        <label asp-for="SkillImage"></label>
+        <input asp-for="SkillImage" class="form-control">
+
+        <label asp-for="Perfection"></label>
+        <input asp-for="Perfection" class="form-control">
+
+        <button class="btn btn-primary mt-2" type="submit">Edit</button>
+    </form>
+</div>

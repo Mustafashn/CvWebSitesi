@@ -1,0 +1,18 @@
+@{
+    Layout="_AdminLayout";
+}
+@model CertificateModel
+<br>
+<div class="container">
+    <h2>Add Certification</h2>
+    <form asp-controller="Admin" asp-action="CertificateAdd" method="POST">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control">
+
+        <label asp-for="Date"></label>
+        <input asp-for="Date" class="form-control">
+
+        <button class="btn btn-success mt-2" type="submit">Add</button>
+    </form>
+</div>

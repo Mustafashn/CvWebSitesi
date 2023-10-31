@@ -1,0 +1,12 @@
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\bin\Debug\net5.0\cv.entity.deps.json
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\bin\Debug\net5.0\cv.entity.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\bin\Debug\net5.0\cv.entity.pdb
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\cv.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\cv.entity.AssemblyInfoInputs.cache
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\cv.entity.AssemblyInfo.cs
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\cv.entity.csproj.CoreCompileInputs.cache
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\cv.entity.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\cv.entity.pdb
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\ref\cv.entity.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\obj\Debug\net5.0\cv.entity.csproj.AssemblyReference.cache
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.entity\bin\Debug\net5.0\ref\cv.entity.dll

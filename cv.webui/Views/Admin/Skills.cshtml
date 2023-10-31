@@ -1,0 +1,81 @@
+@{
+    Layout = "_AdminLayout";
+    string progressColor="";
+    string badgeColor ="";
+}
+@model List<Skill>
+
+<br>
+<div class="wrapper">
+<!-- Navbar -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Yetenek Listem</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <th>Task</th>
+                                        <th>Progress</th>
+                                        <th style="width: 40px">Label</th>
+                                        <th style="width: 200px"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for(int i=0; i<Model.Count;i++) {
+                                        <tr>
+                                            @if (Model[i].Perfection<50){
+                                                progressColor="bg-danger";
+                                                badgeColor="bg-danger";
+                                            }
+                                            else if (Model[i].Perfection<75) {
+                                                progressColor="bg-warning";
+                                                badgeColor="bg-warning";
+                                            }
+                                            else {
+                                                progressColor="bg-success";
+                                                badgeColor="bg-success";
+                                            }
+                                        <td>@(i+1)</td>
+                                        <td>@Model[i].SkillName</td>
+                                        <td>
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar @progressColor" style="width: @Model[i].Perfection%"></div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge @badgeColor">@Model[i].Perfection%</span></td>
+                                        <td>
+                                            <div class="d-grid gap-1 d-md-block">
+                                                <form action="/admin/SkillDelete" method="POST" style="display:inline">
+                                                            <input type="hidden" name="SkillId" value="@Model[i].SkillId">
+                                                            <button type="submit" class="btn btn-danger">
+                                                                <i class="fas fa-trash"></i>Delete</button>
+                                                </form>
+                                                <a href="/admin/SkillEdit/@Model[i].SkillId" class="btn btn-warning">
+                                                <i class="fas fa-pencil-alt"></i>Edit</a>
+                                                
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a href="/admin/SkillAdd" class="btn btn-primary">Add Skill</a>
+
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

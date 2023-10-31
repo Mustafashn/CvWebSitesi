@@ -1,0 +1,50 @@
+@{
+Layout = "_AdminLayout";
+}
+@model List<Certification>
+<br>
+<div class="container">
+    <section class="content">
+    <div class="container-fluid">
+        <div class="row"> 
+            <!-- /.col -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                @foreach(var certificate in Model){
+                                    <div class="timeline timeline-inverse">
+                                        <div class="time-label">
+                                            <a href="/admin/CertificateEdit/@certificate.CertificationId" class="btn btn-success btn-sm">
+                                                @(((DateTime)certificate.Date).ToString("dd-MMM-yyyy"))
+                                            </a>
+                                            
+                                        </div>
+                                        <div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    <div class="d-flex justify-content-between">
+                                                        @certificate.Description
+                                                    <form action="/admin/CertificateDelete" method="POST" style="display:inline">
+                                                        <input type="hidden" name="CertificationId" value="@certificate.CertificationId">
+                                                        <button type="submit" class="btn btn-danger btn-sm">
+                                                            <i class="fas fa-trash "></i></button>
+                                                    </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>      
+                                    </div>
+                                    
+                                }
+                                
+                            </div>
+                    <a href="/admin/certificateAdd" class="btn btn-info">Add Certification</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>

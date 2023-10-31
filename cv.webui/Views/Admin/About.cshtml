@@ -1,0 +1,46 @@
+@{
+Layout="_AdminLayout";
+}
+@model List<About>
+    <br>
+<div class="container" style="width: 1000px;">
+        <h2>Interest List</h2>
+<table class="table table-bordered mr-10 ml-10">
+    <tr>
+        <th>ID</th>
+        <th >Name</th>
+        <th >Surname</th>
+        <th>Description</th>
+        <th >Active</th>
+        <th style="width: 180px;"></th>
+    </tr>
+    @foreach(var item in  Model) {
+        <tr>
+            <td>@item.AboutId</td>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@if(item.Description.Length >50) {
+                @item.Description.Substring(0,50)
+                }
+                else {
+                    @item.Description
+                }...</td>
+            <td style="color: @(item.IsActive ? "green":"red")">@item.IsActive</td>
+            <td >
+                <div class="d-grid gap-2 d-md-block">
+                    <form action="/admin/AboutDelete" method="POST" style="display:inline">
+                                <input type="hidden" name="AboutId" value="@item.AboutId">
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>Delete</button>
+                    </form>
+                    <a href="/admin/AboutEdit/@item.AboutId" class="btn btn-warning btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    Edit</a>
+
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+ <a href="/admin/AboutAdd" class="btn btn-success">Add About</a>
+</div>

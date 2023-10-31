@@ -1,0 +1,41 @@
+@{
+    Layout="_AdminLayout";
+    
+}
+@model AboutModel
+<br>
+
+<div class="container">
+    <h2>Edit About</h2>
+    <form asp-controller="Admin" asp-action="AboutEdit" method="POST" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="hidden" name="AboutId" value="@Model.AboutId">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname" class="form-control">
+
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control">
+
+        <label asp-for="Mail"></label>
+        <input asp-for="Mail" class="form-control">
+
+        <label asp-for="ImageUrl" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="hidden" asp-for="ImageUrl">
+                        <img src="~/admin/dist/img/AboutImg/@Model.ImageUrl" width="80">
+                        <input type="file" name="file">
+                    </div>
+
+        <label asp-for="Description"></label>
+        <textarea rows="5" asp-for="Description" class="form-control"></textarea>
+
+        <input class="btn-check" type="checkbox" asp-for="IsActive" autocomplete="off">
+        <label class="btn btn-outline-primary mt-3" asp-for="IsActive"></label>
+        <button class="btn btn-primary mt-2" type="submit">Edit</button>
+
+        
+    </form>
+</div>

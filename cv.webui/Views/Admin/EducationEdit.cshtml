@@ -1,0 +1,28 @@
+@{
+    Layout="_AdminLayout";
+}
+@model EducationModel
+<br>
+<div class="container">
+    <h2>Edit Education</h2>
+    <form asp-controller="Admin" asp-action="EducationEdit" method="POST">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="hidden" name="EducationId" value="@Model.EducationId">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control">
+
+        <label asp-for="SubTitle"></label>
+        <input asp-for="SubTitle" class="form-control">
+
+        <label asp-for="GPA"></label>
+        <input asp-for="GPA" class="form-control">
+
+        <label asp-for="FirstDate"></label>
+        <input asp-for="FirstDate" class="form-control">
+
+        <label asp-for="LastDate"></label>
+        <input asp-for="LastDate" class="form-control">
+
+        <button class="btn btn-primary mt-2" type="submit">Send</button>
+    </form>
+</div>

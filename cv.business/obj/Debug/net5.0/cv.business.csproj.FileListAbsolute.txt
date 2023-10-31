@@ -1,0 +1,17 @@
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\cv.business.deps.json
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\cv.business.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\cv.business.pdb
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\cv.data.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\cv.entity.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\cv.entity.pdb
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\cv.data.pdb
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.csproj.AssemblyReference.cache
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.AssemblyInfoInputs.cache
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.AssemblyInfo.cs
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.csproj.CoreCompileInputs.cache
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.csproj.CopyComplete
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\cv.business.pdb
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\obj\Debug\net5.0\ref\cv.business.dll
+C:\Users\musta\Documents\UdemyWebProgramlama\CvWeb\cv.business\bin\Debug\net5.0\ref\cv.business.dll

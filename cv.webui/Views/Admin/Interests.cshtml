@@ -1,0 +1,41 @@
+@{
+Layout="_AdminLayout";
+}
+@model List<Interest>
+    <br>
+<div class="container" style="width: 750px;">
+        <h2>Interest List</h2>
+<table class="table table-bordered mr-10 ml-10">
+    <tr>
+        <th>ID</th>
+        <th >Description</th>
+        <th style="width: 180px;"></th>
+    </tr>
+    @foreach(var item in  Model) {
+        <tr>
+            <td>@item.InterestId</td>
+            @if(item.Description.Length <50){
+              <td>   @item.Description </td>
+            } 
+            else {
+             <td>   @item.Description.Substring(0,50) ...</td>
+                
+            }
+            <td >
+                <div class="d-grid gap-2 d-md-block">
+                    <form action="/admin/InterestDelete" method="POST" style="display:inline">
+                                <input type="hidden" name="InterestId" value="@item.InterestId">
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>Delete</button>
+                    </form>
+                    <a href="/admin/InterestEdit/@item.InterestId" class="btn btn-warning btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    Edit</a>
+
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+ <a href="/admin/InterestAdd" class="btn btn-success">Add Interest</a>
+</div>

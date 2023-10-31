@@ -1,0 +1,18 @@
+@model About
+<section class="resume-section" id="about">
+    <div class="resume-section-content">
+        <h1 class="mb-0">
+            @Model.Name
+            <span class="text-primary">@Model.Surname</span>
+        </h1>
+        <div class=" mb-5">
+            @Model.Address· (551) 109 82 95 ·
+            <a href="mailto:name@email.com">@Model.Mail</a>
+        </div>
+        <p class="lead mb-5">@Model.Description</p>
+        <div class="social-icons">
+            <a class="social-icon" href="https://www.linkedin.com/in/mustafasahin-/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="https://github.com/Mustafashn" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>

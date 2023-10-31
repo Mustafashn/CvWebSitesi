@@ -1,0 +1,9 @@
+@model List<Interest>
+<section class="resume-section" id="interests">
+    <div class="resume-section-content">
+        <h2 class="mb-5">More About Me</h2>
+        @foreach(var interest in Model) {
+            <p>@interest.Description</p>
+        }
+    </div>
+</section>
